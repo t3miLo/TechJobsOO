@@ -3,18 +3,29 @@
 <div asp-validation-summary="All"></div>
 
 <form asp-controller="Job" asp-action="New" method="post">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input class="form-control" asp-for="Name" />
-    </div>
-    <div class="form-group">
-        <label asp-for="EmployerID"></label>
-        <select asp-for="EmployerID" asp-items="Model.Employers"></select>
-    </div>
+	<div class="form-group">
+		<label asp-for="Name"></label>
+		<input class="form-control" asp-for="Name" />
+	</div>
+	<div class="form-group">
+		<label asp-for="EmployerID"></label>
+		<select class='form-control' asp-for="EmployerID" asp-items="Model.Employers"></select>
+	</div>
+	<div class="form-group">
+		<label asp-for="Location"></label>
+		<select class="form-control" asp-for="Location" asp-items="Model.Locations"></select>
+	</div>
+	<div class="form-group">
+		<label asp-for="CoreCompetency"></label>
+		<select class="form-control" asp-for="CoreCompetency" asp-items="Model.CoreCompetencies"></select>
+	</div>
+	<div class="form-group">
+		<label asp-for="PositionType"></label>
+		<select class="form-control" asp-for="PositionType" asp-items="Model.PositionTypes"></select>
+	</div>
+	@{
+		// TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
+	}
 
-    @{ 
-        // TODO #5 - Create <select> dropdowns for other job fields (outside of this @{ } block)
-    }
-
-    <input type="submit" value="Add Job" />
+	<input type="submit" value="Add Job" />
 </form>

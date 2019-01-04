@@ -1,4 +1,6 @@
-﻿namespace TechJobs.Models
+﻿
+
+namespace TechJobs.Models
 {
     public class Job
     {
@@ -17,5 +19,5 @@
             nextId++;
         }
 
-    }
+	}
 }
